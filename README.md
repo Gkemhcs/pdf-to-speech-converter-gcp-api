@@ -1,0 +1,2 @@
+# pdf-to-speech-converter-gcp-api
+A SIMPLE API BACKED BY API-GATEWAY TO CONVERT PDF CONTENT INTO SPEECH 
