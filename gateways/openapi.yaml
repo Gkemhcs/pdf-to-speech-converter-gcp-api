@@ -1,0 +1,37 @@
+swagger: '2.0'
+info:
+    title: "TEXT TO SPEECH CONVERTER"
+    description: "api extracts pdf text and summarizes it and converts it into mp3 "
+    version: '1.0'
+schemes:
+  - https
+produces:
+- application/json 
+consumes:
+- application/json
+paths:
+    /login:
+       post:
+           operationId:  login 
+           description : "user login for jwt"
+           x-google-backend:
+              address: AUTH_SERVER
+              path_translation: APPEND_PATH_TO_ADDRESS
+           responses:
+             '200':
+               description: "GOOD RESPONSE"
+               schema:
+                 type: string
+    /upload:
+         post:
+            operationId: upload-file
+            description: "upload file"
+            x-google-backend:
+                 address: API_SERVER
+                 path_translation: APPEND_PATH_TO_ADDRESS
+            responses:
+             '200':
+               description: "GOOD RESPONSE"
+               schema:
+                 type: string
+       
